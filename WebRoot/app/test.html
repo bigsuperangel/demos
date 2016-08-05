@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>test.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+	$("#test").click(function(){
+		window.open('index.html');
+	});  
+	$(document).keypress(function(e) {  
+    // 回车键事件  
+       if(e.which == 13) {  
+			$("#test").trigger('click');
+		   }  
+	   }); 
+  });
+
+  </script>
+  </head>
+  <body>
+    This is my HTML page. <br>
+    <div id="test" style="font-size: 30px">test</div>
+  </body>
+</html>
